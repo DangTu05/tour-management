@@ -1,0 +1,1 @@
+{"root":["../src/index.ts","../src/config/database.config.ts","../src/config/environment.config.ts","../src/controllers/client/tour.controller.ts","../src/middlewares/errorhandling.middleware.ts","../src/models/tour.model.ts","../src/routes/client/index.route.ts","../src/routes/client/tour.route.ts"],"version":"5.7.3"}

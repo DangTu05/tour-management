@@ -8,6 +8,6 @@
     "esModuleInterop": true, /// Dùng đc import thay cho require
     "strict": true
   },
-  "include": ["src/**/*"], /// Biên dịch tất cả file trong thư mục src
+  "include": ["src/**/*.ts"], /// Biên dịch tất cả file trong thư mục src
   "exclude": ["node_modules", "dist"] /// Không biên dịch file trong thư mục node_modules và dist
 }

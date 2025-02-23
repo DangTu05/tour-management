@@ -4,16 +4,29 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.ts"
+    "start": "nodemon src/index.ts",
+    "build": "rimraf dist tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "dev": "cross-env BUILD_MODE=dev nodemon src/index.ts",
+    "production": "npm run ts.check && npm run build && cross-env BUILD_MODE=prod node dist/index.js",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
     "express": "^4.21.2",
+    "http-status-codes": "^2.3.0",
     "mysql2": "^3.12.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.2",
@@ -28,6 +41,8 @@
     "@types/sequelize": "^4.28.20",
     "eslint": "^9.21.0",
     "globals": "^16.0.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^6.0.1",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.24.1"
   }
