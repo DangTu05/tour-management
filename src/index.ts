@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cc9200c ( Khởi tạo dự án và kết nối với db)
-import express, { Express } from "express";
-import sequelize from "./config/database.config";
-import dotenv from "dotenv";
-dotenv.config();
-const app: Express = express();
-const port: number = 3000;
-sequelize;
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-<<<<<<< HEAD
-=======
-=======
 /* eslint-disable no-console */
 import express, { Express } from "express";
 import connectDB from "./config/database.config";
@@ -45,5 +28,3 @@ const startServer = (): void => {
     process.exit(1);
   }
 })();
->>>>>>> c258979 ( Khởi tạo dự án và kết nối với db)
->>>>>>> cc9200c ( Khởi tạo dự án và kết nối với db)
